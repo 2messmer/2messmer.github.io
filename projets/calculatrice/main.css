@@ -1,35 +1,34 @@
-/* Style du conteneur principal */
+/* Style du conteneur principal - Plus large et centré */
 .calculator-container {
-    /* Augmente la largeur et la rend flexible */
-    width: 80vw; /* 80% de la largeur de la vue (viewport width) */
-    max-width: 600px; /* Limite la taille maximale pour les très grands écrans */
-    margin: 5vh auto; /* Centre verticalement (5% de la hauteur de la vue) et horizontalement */
-    border: 2px solid #555; /* Bordure plus visible */
-    border-radius: 15px; /* Coins plus arrondis */
-    padding: 30px; /* Plus de padding */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
-    background-color: #f8f8f8; /* Un fond légèrement différent */
+    width: 90vw; /* 90% de la largeur de l'écran */
+    max-width: 800px; /* Limite maximale plus grande */
+    margin: 3vh auto; 
+    border: 4px solid #333; /* Bordure très épaisse */
+    border-radius: 20px; 
+    padding: 40px; /* Plus d'espace intérieur */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff; 
 }
 
 h1 {
     text-align: center;
-    color: #222; /* Couleur de titre plus foncée */
-    font-size: 3em; /* Rend le titre géant */
-    margin-bottom: 30px;
+    color: #000;
+    font-size: 4em; /* Titre ÉNORME */
+    margin-bottom: 40px;
 }
 
-/* Style de l'écran d'affichage */
+/* Style de l'écran d'affichage - Très grand pour bien voir le texte */
 #display {
     width: 100%;
-    height: 80px; /* Hauteur de l'écran plus grande */
-    font-size: 3em; /* Texte de l'écran géant */
+    height: 100px; /* Hauteur de l'écran massive */
+    font-size: 4em; /* Texte de l'écran GÉANT */
     text-align: right;
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 3px solid #666;
+    border-radius: 10px;
     box-sizing: border-box;
-    background-color: #e0e0e0; /* Fond de l'écran */
+    background-color: #e6e6e6; 
     color: #333;
 }
 
@@ -37,20 +36,60 @@ h1 {
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 15px; /* Plus d'espace entre les boutons */
+    gap: 20px; /* Écart encore plus grand entre les boutons */
 }
 
-/* Style général des boutons */
+/* Style général des boutons - TRÈS GRANDS */
 .buttons button {
-    padding: 25px; /* Plus de padding pour des boutons plus grands */
-    font-size: 2em; /* Taille de texte des boutons géante */
+    padding: 35px; /* Padding très grand pour augmenter la taille de la zone cliquable */
+    font-size: 3em; /* Texte des boutons énorme */
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    background-color: #e0e0e0;
-    transition: background-color 0.2s, transform 0.1s; /* Ajout d'une petite animation */
+    background-color: #ededed;
+    transition: background-color 0.2s, transform 0.1s;
 }
 
 /* Style des boutons au survol (hover) */
 .buttons button:hover {
     background-color: #d0d0d0;
+    transform: scale(1.03); 
+}
+
+/* Style des boutons opérateurs */
+.operator {
+    background-color: #ffaa3a; /* Orange vif */
+    color: white;
+}
+.operator:hover {
+    background-color: #e69a35;
+}
+
+/* Style du bouton égal (=) */
+#calculate {
+    grid-column: span 2; 
+    background-color: #4CAF50;
+    color: white;
+}
+#calculate:hover {
+    background-color: #45a049;
+}
+
+/* Style spécifique pour le bouton zéro */
+.zero {
+    grid-column: span 2;
+}
+
+/* Le style pour le lien de retour */
+p {
+    text-align: center;
+    margin-top: 40px; 
+    font-size: 1.5em; /* Lien de retour bien visible */
+}
+p a {
+    color: #0056b3; 
+    text-decoration: none; 
+}
+p a:hover {
+    text-decoration: underline; 
+}
